@@ -2,7 +2,7 @@
 # Guards the three ways this fixture has silently stopped working.
 # Run with no argument to check the source; pass a URL to also check what is served.
 #   ./check.sh
-#   ./check.sh https://reodigital.github.io/neural-test-page/
+#   ./check.sh https://reodigital.github.io/cx-audit-fixture/
 set -uo pipefail
 fail=0
 note() { printf '%s\n' "$1"; }

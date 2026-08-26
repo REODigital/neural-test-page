@@ -1,4 +1,4 @@
-# neural-test-page
+# cx-audit-fixture
 
 A controlled test page for Neural, REO's CRO audit product. It is published with GitHub Pages
 from this repository.
@@ -91,7 +91,7 @@ creeping back in, a payload going missing, and the price changing. Run it before
 
 ```
 ./check.sh                                              # the source
-./check.sh https://reodigital.github.io/neural-test-page/   # what is actually served
+./check.sh https://reodigital.github.io/cx-audit-fixture/   # what is actually served
 ```
 
 `.github/workflows/fixture-check.yml` runs it on every push and weekly against the live page, so

@@ -18,4 +18,4 @@ jobs:
         run: bash check.sh
       - name: Check the live page
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
-        run: bash check.sh https://reodigital.github.io/neural-test-page/
+        run: bash check.sh https://reodigital.github.io/cx-audit-fixture/

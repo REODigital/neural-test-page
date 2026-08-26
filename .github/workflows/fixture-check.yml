@@ -1,0 +1,21 @@
+name: fixture-check
+
+# Runs on every change, and weekly against the live page so a fixture that quietly
+# stopped serving is found before a NEURALPROD run depends on it.
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: '17 6 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check the source
+        run: bash check.sh
+      - name: Check the live page
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        run: bash check.sh https://reodigital.github.io/neural-test-page/
